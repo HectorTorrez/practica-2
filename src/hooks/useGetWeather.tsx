@@ -2,32 +2,25 @@ import { useEffect, useState } from "react";
 import { Weather } from "../types/weather";
 
 import { weatherMock } from "../API/mock";
+import { getWeather } from "../components/helpers/getWeather";
 
 type useGetWeatherType = {
   weather: Weather[];
 };
 
-const API = `https://api.openweathermap.org/data/2.5/forecast?appid=${
-  import.meta.env.VITE_API_KEY
-}&q=San Salvador&units=metric`;
-export default function useGetWeather(): useGetWeatherType {
+export default function useGetWeather(city: string): useGetWeatherType {
   const [weather, setWeather] = useState<Weather[]>([]);
 
-  const getWeather = async () => {
-    try {
-      const response = await fetch(API);
-      const data = await response.json();
-      setWeather([data]);
-    } catch (error) {
-      console.error(error);
-    }
+  const getData = async () => {
+    //validacion para cuando el usuario no escriba una ciudad, este por defecto sea san salvador
+    city === "" ? "san salvador" : city;
+    const data = await getWeather(city);
+    setWeather([data]);
   };
 
-  console.log(weather);
   useEffect(() => {
-    getWeather();
-    // setWeather([weatherMock]);
-  }, []);
+    getData();
+  }, [city]);
 
   return { weather };
 }
