@@ -21,7 +21,12 @@ function App() {
             />
             <section className={styles["forecast-days"]}>
               {day.list.map((item) => {
-                return <WeatherForecast key={item.dt} currentDay={item} />;
+                return (
+                  <WeatherForecast
+                    key={crypto.randomUUID()}
+                    currentDay={item}
+                  />
+                );
               })}
             </section>
           </>
