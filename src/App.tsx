@@ -2,6 +2,7 @@ import styles from "./app.module.css";
 import CurrentDayCard from "./components/CurrentDay/CurrentDayCard";
 import Navbar from "./components/Navbar/Navbar";
 import useGetWeather from "./hooks/useGetWeather";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
 
 function App() {
   const { weather } = useGetWeather();
@@ -16,9 +17,13 @@ function App() {
             <CurrentDayCard
               key={day.city.id}
               city={day.city}
-              currenDay={day.list[0]}
+              currentDay={day.list[0]}
             />
-            {/* <WeatherForecast key={day.} /> */}
+            <section className={styles["forecast-days"]}>
+              {day.list.map((item) => {
+                return <WeatherForecast key={item.dt} currentDay={item} />;
+              })}
+            </section>
           </>
         ))}
       </section>

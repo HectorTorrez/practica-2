@@ -1,10 +1,5 @@
 export type CurrentDayCardProps = {
-  city: {
-    id: number;
-    name: string;
-    country: string;
-  };
-  currenDay: {
+  currentDay: {
     dt: number;
     main: {
       temp: number;
@@ -22,3 +17,11 @@ export type CurrentDayCardProps = {
     };
   };
 };
+
+export interface CurrentDayCardCity extends CurrentDayCardProps {
+  city: {
+    id: number;
+    name: string;
+    country: string;
+  };
+}
