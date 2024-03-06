@@ -8,18 +8,21 @@ header {
 
 form {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 20px;
 }
 
 form label {
   display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 form label input {
+  width: 200px;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--border);

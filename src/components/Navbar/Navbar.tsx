@@ -26,7 +26,7 @@ export default function Navbar({ handleSearch }: NavbarProps) {
               onChange={(e) => handleChange(e)}
               type="text"
               id="search"
-              placeholder="San Salvador, sv"
+              placeholder="San Salvador, sv/503"
               value={inputText}
             />
           </label>
