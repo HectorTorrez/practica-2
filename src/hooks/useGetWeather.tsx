@@ -12,8 +12,8 @@ export default function useGetWeather(city: string): useGetWeatherType {
 
   const getData = async () => {
     //validacion para cuando el usuario no escriba una ciudad, este por defecto sea san salvador
-    city === "" ? "san salvador" : city;
-    const data = await getWeather(city);
+    const newCity = city.length === 0 ? "san salvador" : city;
+    const data = await getWeather(newCity);
     setWeather([data]);
   };
 
