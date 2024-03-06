@@ -16,7 +16,7 @@ export default function CurrentDayCard({
     day: "numeric",
   });
 
-  const icon = `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`;
+  const icon = `https://openweathermap.org/img/wn/${currentDay?.weather[0].icon}@2x.png`;
 
   return (
     <section className={styles["card-day"]}>
@@ -26,7 +26,7 @@ export default function CurrentDayCard({
             {city.name}
             <span>{city.country}</span>
           </h2>
-          <p>{currentDay.weather[0].description}</p>
+          <p>{currentDay?.weather[0].description ?? ""}</p>
         </section>
         <img src={icon} alt={icon + "icon"} />
       </section>

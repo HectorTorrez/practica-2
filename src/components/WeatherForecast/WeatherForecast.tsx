@@ -16,13 +16,13 @@ export default function WeatherForecast({ currentDay }: CurrentDayCardProps) {
     hour: "2-digit",
   });
 
-  const icon = `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`;
+  const icon = `https://openweathermap.org/img/wn/${currentDay?.weather[0].icon}@2x.png`;
 
   return (
     <section className={styles["card-day"]}>
       <section className={styles["card-header"]}>
         <section className={styles["card-header--text"]}>
-          <p>{currentDay.weather[0].description}</p>
+          <p>{currentDay?.weather[0].description}</p>
           <p>{dayName}</p>
         </section>
         <img src={icon} alt={icon + "icon"} />

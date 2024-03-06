@@ -5,6 +5,7 @@
   align-items: start;
   border: 1px solid var(--border);
   padding: 30px 30px;
+  margin-top: 10px;
   border-radius: 10px;
   background-color: var(--background-secondary);
 }
