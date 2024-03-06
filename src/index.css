@@ -10,6 +10,7 @@
   max-width: 1000px;
   margin: 0 auto;
 
+  --background-color--primary: #1e293b;
   --background-secondary: #334155;
   --border: #334155;
   --text-color: #fff;
@@ -22,4 +23,5 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--background-color--primary);
 }

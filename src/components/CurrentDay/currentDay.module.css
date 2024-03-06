@@ -21,18 +21,25 @@
   width: 100%;
 }
 
-.card-header h2 {
+.card-header--info h2 {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: bold;
   color: var(--text-color);
 }
 
-.card-header h2 span {
+.card-header--info h2 span {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--text-color-secondary);
   margin-left: 10px;
 }
+
+.card-header--info p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+
 .card-descriptions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,13 +62,4 @@
   width: 100%;
   font-size: 5rem;
   margin: 0px;
-}
-
-@media screen and (min-width: 768px) {
-  .card-descriptions {
-    grid-template-columns: 4fr 1fr;
-  }
-  .card-description--info {
-    display: flex;
-  }
 }
