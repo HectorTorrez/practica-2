@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Weather } from "../types/weather";
 
-import { weatherMock } from "../API/mock";
 import { getWeather } from "../components/helpers/getWeather";
 
 type useGetWeatherType = {

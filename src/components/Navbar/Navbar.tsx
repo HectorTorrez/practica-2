@@ -1,6 +1,5 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import styles from "./navbar.module.css";
-import { getWeather } from "../helpers/getWeather";
 
 type NavbarProps = {
   handleSearch: (value: string) => void;

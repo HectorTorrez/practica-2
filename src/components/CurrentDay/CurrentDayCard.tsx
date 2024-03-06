@@ -1,7 +1,4 @@
-import {
-  CurrentDayCardCity,
-  CurrentDayCardProps,
-} from "../../types/CurrentDayCardProps";
+import { CurrentDayCardCity } from "../../types/CurrentDayCardProps";
 import { Humidity, Temperature, Wind } from "../Icons/Icons";
 import styles from "./currentDay.module.css";
 
