@@ -1,5 +1,5 @@
 .card-day {
-  min-width: 250px;
+  min-width: 270px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -42,13 +42,14 @@
 
 .card-descriptions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 10px;
   width: 100%;
 }
 .card-descriptions section {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
   margin-top: 10px;
 }

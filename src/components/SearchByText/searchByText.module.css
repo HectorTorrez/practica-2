@@ -5,6 +5,7 @@ form {
 }
 
 form label {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -13,8 +14,13 @@ form label {
   font-weight: 700;
 }
 
+form label span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
 form label input {
-  width: 200px;
+  width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--border);
@@ -27,4 +33,10 @@ form button {
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
 }

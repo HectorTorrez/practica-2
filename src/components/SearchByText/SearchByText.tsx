@@ -26,8 +26,13 @@ export default function SearchByText({ handleSearch }: SearchByTextProps) {
           placeholder="San Salvador, sv/503"
           value={inputText}
         />
+        <span>
+          * Para buscar por posición geográfica utiliza la latitud y longitud
+          así "13.6894/-89.1872"
+          <p></p>
+        </span>
       </label>
-      <button>Buscar</button>
+      <button disabled={inputText.length === 0}>Buscar</button>
     </form>
   );
 }

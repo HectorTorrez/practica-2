@@ -17,7 +17,7 @@ function App() {
     <main className={styles["main"]}>
       <Navbar handleSearch={handleSearch} />
       <section className={styles["current-day"]}>
-        <p className={styles["current-day--title"]}>Current Day</p>
+        <p className={styles["current-day--title"]}>Día actual</p>
 
         <>
           {weather?.map((day) =>

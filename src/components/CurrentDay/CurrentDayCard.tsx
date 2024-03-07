@@ -7,7 +7,7 @@ export default function CurrentDayCard({
   currentDay,
 }: CurrentDayCardCity) {
   const day = new Date(currentDay.dt * 1000);
-  const dayName = day.toLocaleDateString("en-US", {
+  const dayName = day.toLocaleDateString("es-ES", {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -31,16 +31,16 @@ export default function CurrentDayCard({
         <section className={styles["card-description--info"]}>
           <p>{dayName}</p>
           <p>
-            <Humidity width="20" color="#0077ff" /> Humidity:{" "}
+            <Humidity width="20" color="#0077ff" /> Humedad:{" "}
             {currentDay.main.humidity}%
           </p>
           <p>
             <Wind width="20" color="#ffffff" />
-            Wind: {""}
-            {currentDay.wind.speed} meter/sec
+            Viento: {""}
+            {currentDay.wind.speed} m/s
           </p>
           <p>
-            <Temperature width="20" color="#ff0000" /> Feels Like: {""}
+            <Temperature width="20" color="#ff0000" /> Sensacion termica: {""}
             {currentDay.main.feels_like.toFixed()}°
           </p>
         </section>
