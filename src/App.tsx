@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import useGetWeather from "./hooks/useGetWeather";
 import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
 import { useState } from "react";
+import Errors from "./components/Errors/Errors";
 
 function App() {
   const [input, setInput] = useState("san salvador");
@@ -34,7 +35,8 @@ function App() {
                 </section>
               </section>
             ) : (
-              <div>{day.message}</div>
+              // <div className={styles['main-errors']}>{day.message}</div>
+              <Errors error={day.message} />
             )
           )}
         </>

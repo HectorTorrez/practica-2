@@ -1,6 +1,6 @@
 export interface Weather {
   cod: string;
-  message: number;
+  message: string;
   cnt: number;
   list: List[];
   city: City;
