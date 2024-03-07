@@ -5,7 +5,7 @@ import {
   sizeIcons,
   temperatureColor,
   windColor,
-} from "../helpers/iconColors";
+} from "../../helpers/iconColors";
 import styles from "./currentDay.module.css";
 
 export default function CurrentDayCard({

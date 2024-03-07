@@ -6,6 +6,8 @@ export default function Errors({ error }: { error: string }) {
     newError = "Ciudad no encontrada.";
   } else if (error === "wrong latitude") {
     newError = "Datos geográficos no encontrados.";
+  } else {
+    newError = error;
   }
   return <div className={styles["main-errors"]}>{newError}</div>;
 }

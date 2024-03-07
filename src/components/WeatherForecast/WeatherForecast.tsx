@@ -11,7 +11,7 @@ import {
   sizeIcons,
   temperatureColor,
   windColor,
-} from "../helpers/iconColors";
+} from "../../helpers/iconColors";
 import styles from "./weatherForecast.module.css";
 
 export default function WeatherForecast({ currentDay }: CurrentDayCardProps) {
