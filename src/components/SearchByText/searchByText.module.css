@@ -17,6 +17,7 @@ form label {
 form label span {
   font-size: 1.4rem;
   font-weight: 400;
+  color: var(--text-colr-secondary);
 }
 
 form label input {
