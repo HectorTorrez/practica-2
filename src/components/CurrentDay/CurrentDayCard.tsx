@@ -1,5 +1,11 @@
 import { CurrentDayCardCity } from "../../types/CurrentDayCardProps";
 import { Humidity, Temperature, Wind } from "../Icons/Icons";
+import {
+  humidityColor,
+  sizeIcons,
+  temperatureColor,
+  windColor,
+} from "../helpers/iconColors";
 import styles from "./currentDay.module.css";
 
 export default function CurrentDayCard({
@@ -31,22 +37,23 @@ export default function CurrentDayCard({
         <section className={styles["card-description--info"]}>
           <p>{dayName}</p>
           <p>
-            <Humidity width="20" color="#0077ff" /> Humedad:{" "}
+            <Humidity width={sizeIcons} color={humidityColor} /> Humedad:{" "}
             {currentDay.main.humidity}%
           </p>
           <p>
-            <Wind width="20" color="#ffffff" />
+            <Wind width={sizeIcons} color={windColor} />
             Viento: {""}
             {currentDay.wind.speed} m/s
           </p>
           <p>
-            <Temperature width="20" color="#ff0000" /> Sensacion termica: {""}
+            <Temperature width={sizeIcons} color={temperatureColor} /> Sensacion
+            termica: {""}
             {currentDay.main.feels_like.toFixed()}°
           </p>
         </section>
         <section className={styles["card-description--temperature"]}>
           <p>
-            <Temperature width="20" color="#ff0000" />{" "}
+            <Temperature width={sizeIcons} color={temperatureColor} />{" "}
             {currentDay.main.temp.toFixed()}°
           </p>
         </section>

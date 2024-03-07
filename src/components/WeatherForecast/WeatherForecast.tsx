@@ -6,6 +6,12 @@ import {
   Temperature,
   Wind,
 } from "../Icons/Icons";
+import {
+  humidityColor,
+  sizeIcons,
+  temperatureColor,
+  windColor,
+} from "../helpers/iconColors";
 import styles from "./weatherForecast.module.css";
 
 export default function WeatherForecast({ currentDay }: CurrentDayCardProps) {
@@ -32,25 +38,25 @@ export default function WeatherForecast({ currentDay }: CurrentDayCardProps) {
       <section className={styles["card-descriptions"]}>
         <section>
           <p>
-            <Humidity width="20" color="#0077ff" /> Humedad:{" "}
+            <Humidity width={sizeIcons} color={humidityColor} /> Humedad:{" "}
             {currentDay.main.humidity}%
           </p>
           <p>
-            <Wind width="20" color="#ffffff" />
+            <Wind width={sizeIcons} color={windColor} />
             Viento: {""}
             {currentDay.wind.speed} m/s
           </p>
         </section>
         <section className={styles["card-description--temperature"]}>
           <p>
-            <Temperature width="20" color="#ff0000" />{" "}
+            <Temperature width={sizeIcons} color={temperatureColor} />{" "}
             {currentDay.main.temp_max.toFixed()}°
-            <ArrowUp width="20px" color="#0077ff" />
+            <ArrowUp width="20px" color={humidityColor} />
           </p>
           <p>
-            <Temperature width="20" color="#ff0000" />{" "}
+            <Temperature width={sizeIcons} color={temperatureColor} />{" "}
             {currentDay.main.temp_min.toFixed()}°
-            <ArrowDown width="20px" color="#0077ff" />
+            <ArrowDown width="20px" color={humidityColor} />
           </p>
         </section>
       </section>
