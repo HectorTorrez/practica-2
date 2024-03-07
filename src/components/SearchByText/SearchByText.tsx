@@ -24,7 +24,7 @@ export default function SearchByText({ handleSearch }: SearchByTextProps) {
           onChange={(e) => handleChange(e)}
           type="text"
           id="search"
-          placeholder="San Salvador, sv/503"
+          placeholder="San Salvador, sv"
           value={inputText}
         />
         <span>
