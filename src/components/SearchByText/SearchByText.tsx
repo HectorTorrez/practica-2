@@ -15,6 +15,7 @@ export default function SearchByText({ handleSearch }: SearchByTextProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSearch(inputText);
+    setInputText("");
   };
   return (
     <form onSubmit={handleSubmit} className={styles["form"]}>
