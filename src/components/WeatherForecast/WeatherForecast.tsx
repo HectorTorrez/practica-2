@@ -18,7 +18,7 @@ export default function WeatherForecast({ currentDay }: CurrentDayCardProps) {
   const day = new Date(currentDay.dt * 1000);
   const dayName = day.toLocaleDateString("es-ES", {
     weekday: "long",
-    month: "long",
+    month: "2-digit",
     day: "2-digit",
     hour: "2-digit",
     hour12: true,
